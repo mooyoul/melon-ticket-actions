@@ -22,7 +22,7 @@ import * as qs from "querystring";
   const webhook = new IncomingWebhook(webhookUrl);
 
   const res = await axios({
-    method: "GET",
+    method: "POST",
     url: "https://ticket.melon.com/tktapi/product/seatStateInfo.json",
     params: {
       v: "1",
