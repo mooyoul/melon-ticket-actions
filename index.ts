@@ -41,7 +41,7 @@ import * as qs from "querystring";
 
   if (res.data.chkResult) {
     const link = `http://ticket.melon.com/performance/index.htm${qs.stringify({
-      prodId: 204755,
+      prodId: productId,
     })}`;
 
     await webhook.send(`티켓사세요 ${link}`);
