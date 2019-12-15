@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "noImplicitAny": true,
+        "declaration": false,
+        "sourceMap": false,
+        "strictNullChecks": true
+    },
+    "include": [
+        "index.ts"
+    ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "melon-ticket-actions",
+  "version": "0.1.0",
+  "description": "GitHub action that notifies ticket availability in melon ticket service",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooyoul/melon-ticket-actions.git"
+  },
+  "keywords": [
+    "github-actions",
+    "typescript"
+  ],
+  "author": "MooYeol Prescott Lee <mooyoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mooyoul/melon-ticket-actions/issues"
+  },
+  "homepage": "https://github.com/mooyoul/melon-ticket-actions#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/commit-analyzer": "6.3.0",
+    "@semantic-release/exec": "3.3.6",
+    "@semantic-release/git": "7.0.16",
+    "@semantic-release/release-notes-generator": "7.3.0",
+    "@types/node": "10.14.18",
+    "@vingle/commitlint-preset": "1.0.3",
+    "@vingle/tslint-preset": "1.0.0",
+    "chai": "4.2.0",
+    "husky": "3.0.5",
+    "semantic-release": "15.13.24",
+    "tslint": "^5.20.0",
+    "typescript": "3.7.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.1.1",
+    "@slack/webhook": "^5.0.2",
+    "axios": "^0.19.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@vingle/commitlint-preset"
+    ]
+  }
+}

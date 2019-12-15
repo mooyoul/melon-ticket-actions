@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@vingle",
+    "@vingle:semantic-commit"
+  ],
+  "docker": {
+    "enabled": false
+  }
+}
