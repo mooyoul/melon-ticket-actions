@@ -27,7 +27,7 @@
     "@semantic-release/exec": "3.3.6",
     "@semantic-release/git": "7.0.16",
     "@semantic-release/release-notes-generator": "7.3.0",
-    "@types/node": "10.14.18",
+    "@types/node": "10.17.9",
     "@vingle/commitlint-preset": "1.0.3",
     "@vingle/tslint-preset": "1.0.0",
     "chai": "4.2.0",
