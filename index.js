@@ -20,7 +20,7 @@ const qs = require("querystring");
     });
     const webhook = new webhook_1.IncomingWebhook(webhookUrl);
     const res = await axios_1.default({
-        method: "GET",
+        method: "POST",
         url: "https://ticket.melon.com/tktapi/product/seatStateInfo.json",
         params: {
             v: "1",
@@ -34,10 +34,10 @@ const qs = require("querystring");
         }),
     });
     // tslint:disable-next-line
-    console.log(res.data);
+    console.log("Got response: ", res.data);
     if (res.data.chkResult) {
         const link = `http://ticket.melon.com/performance/index.htm${qs.stringify({
-            prodId: 204755,
+            prodId: productId,
         })}`;
         await webhook.send(`티켓사세요 ${link}`);
     }
