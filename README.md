@@ -7,7 +7,7 @@
 
 GitHub action that checks ticket availability in Melon Ticket (Korean online ticket store) website.
 
--암표상들 다 망해라- 그리핀 내한공연 보게 해주세요 🙏 
+~~암표상들 다 망해라~~ 그리핀 내한공연 보게 해주세요 🙏 
 
 ## Usage
 
@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check Tickets
-        uses: mooyoul/melon-ticket-actions@v1.0.0
+        uses: mooyoul/melon-ticket-actions@v1.0.1
         with:
           product-id: 204755
           schedule-id: 100001
