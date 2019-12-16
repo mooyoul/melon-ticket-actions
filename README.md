@@ -7,7 +7,15 @@
 
 GitHub action that checks ticket availability in Melon Ticket (Korean online ticket store) website.
 
-~~암표상들 다 망해라~~ 그리핀 내한공연 보게 해주세요 🙏 
+~~암표상들 다 망해라~~ 그리핀 내한공연 보게 해주세요 🙏
+
+-----
+
+![slack](assets/slack.png)
+
+### ⭐️ 존버는 승리한다 ⭐️
+
+![won](assets/won.jpg)
 
 ## Usage
 
