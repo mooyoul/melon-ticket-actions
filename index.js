@@ -5,6 +5,7 @@ const webhook_1 = require("@slack/webhook");
 const axios_1 = require("axios");
 const qs = require("querystring");
 (async () => {
+    var _a;
     // Validate parameters
     const [productId, scheduleId, seatId, webhookUrl] = [
         "product-id",
@@ -18,6 +19,7 @@ const qs = require("querystring");
         }
         return value;
     });
+    const message = (_a = core.getInput("message"), (_a !== null && _a !== void 0 ? _a : "티켓사세요"));
     const webhook = new webhook_1.IncomingWebhook(webhookUrl);
     const res = await axios_1.default({
         method: "POST",
@@ -36,10 +38,10 @@ const qs = require("querystring");
     // tslint:disable-next-line
     console.log("Got response: ", res.data);
     if (res.data.chkResult) {
-        const link = `http://ticket.melon.com/performance/index.htm${qs.stringify({
+        const link = `http://ticket.melon.com/performance/index.htm?${qs.stringify({
             prodId: productId,
         })}`;
-        await webhook.send(`티켓사세요 ${link}`);
+        await webhook.send(`${message} ${link}`);
     }
 })().catch((e) => {
     console.error(e.stack); // tslint:disable-line

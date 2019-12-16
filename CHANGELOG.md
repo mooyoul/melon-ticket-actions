@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/mooyoul/melon-ticket-actions/compare/v1.0.1...v1.1.0) (2019-12-16)
+
+
+### Bug Fixes
+
+* fix missing querystring indicator ([874e35a](https://github.com/mooyoul/melon-ticket-actions/commit/874e35a14292ea6734197f4f41c97c878847c930))
+
+
+### Features
+
+* support custom message ([e6db3f4](https://github.com/mooyoul/melon-ticket-actions/commit/e6db3f496881ecf2b04e92d1862073620d53ae17))
+
 ## [1.0.1](https://github.com/mooyoul/melon-ticket-actions/compare/v1.0.0...v1.0.1) (2019-12-15)
 
 
