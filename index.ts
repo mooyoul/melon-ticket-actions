@@ -19,6 +19,8 @@ import * as qs from "querystring";
     return value;
   });
 
+  const message = core.getInput("message") ?? "티켓사세요";
+
   const webhook = new IncomingWebhook(webhookUrl);
 
   const res = await axios({
@@ -44,7 +46,7 @@ import * as qs from "querystring";
       prodId: productId,
     })}`;
 
-    await webhook.send(`티켓사세요 ${link}`);
+    await webhook.send(`${message} ${link}`);
   }
 })().catch((e) => {
   console.error(e.stack); // tslint:disable-line
