@@ -40,7 +40,7 @@ import * as qs from "querystring";
   console.log("Got response: ", res.data);
 
   if (res.data.chkResult) {
-    const link = `http://ticket.melon.com/performance/index.htm${qs.stringify({
+    const link = `http://ticket.melon.com/performance/index.htm?${qs.stringify({
       prodId: productId,
     })}`;
 
