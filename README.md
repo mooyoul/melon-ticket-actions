@@ -19,7 +19,7 @@ GitHub action that checks ticket availability in Melon Ticket (Korean online tic
 
 ## Usage
 
-Please see [example workflow](./.github/workflows/example.yml), or [Workflow Log](https://github.com/mooyoul/melon-ticket-actions/actions) 
+Please see [example workflow](https://github.com/mooyoul/melon-ticket-actions/blob/1c5a56b9cdd594051d856c16b020f0c5835f6955/.github/workflows/example.yml), or [Workflow Log](https://github.com/mooyoul/melon-ticket-actions/actions?query=workflow%3Aexample) 
 
 ## Sample Github Actions Configuration 
 
