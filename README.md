@@ -32,6 +32,7 @@ jobs:
           schedule-id: 100001
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '<@U12345678> 달려달려~'
 ```
 
 ## License
