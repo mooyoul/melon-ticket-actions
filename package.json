@@ -34,7 +34,7 @@
     "husky": "4.0.10",
     "semantic-release": "15.14.0",
     "tslint": "5.20.1",
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   },
   "dependencies": {
     "@actions/core": "^1.1.1",
