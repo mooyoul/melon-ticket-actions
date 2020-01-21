@@ -33,7 +33,7 @@
     "chai": "4.2.0",
     "husky": "4.0.10",
     "semantic-release": "15.14.0",
-    "tslint": "5.20.1",
+    "tslint": "6.0.0",
     "typescript": "3.7.5"
   },
   "dependencies": {
