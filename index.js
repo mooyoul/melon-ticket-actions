@@ -19,7 +19,7 @@ const qs = require("querystring");
         }
         return value;
     });
-    const message = (_a = core.getInput("message"), (_a !== null && _a !== void 0 ? _a : "티켓사세요"));
+    const message = (_a = core.getInput("message")) !== null && _a !== void 0 ? _a : "티켓사세요";
     const webhook = new webhook_1.IncomingWebhook(webhookUrl);
     const res = await axios_1.default({
         method: "POST",
