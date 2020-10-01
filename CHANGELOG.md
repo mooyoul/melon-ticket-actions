@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/mooyoul/melon-ticket-actions/compare/v1.1.1...v1.1.2) (2020-10-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @actions/core to v1.2.6 [security] ([b646738](https://github.com/mooyoul/melon-ticket-actions/commit/b646738f74a696ede2941053319b788ba00a055f))
+
 ## [1.1.1](https://github.com/mooyoul/melon-ticket-actions/compare/v1.1.0...v1.1.1) (2020-08-21)
 
 
