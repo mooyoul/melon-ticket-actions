@@ -31,7 +31,7 @@
     "@vingle/commitlint-preset": "1.0.3",
     "@vingle/tslint-preset": "1.0.1",
     "chai": "4.3.4",
-    "husky": "4.3.8",
+    "husky": "5.2.0",
     "semantic-release": "17.4.2",
     "tslint": "5.20.1",
     "typescript": "3.9.9"
