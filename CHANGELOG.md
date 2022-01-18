@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/mooyoul/melon-ticket-actions/compare/v1.1.4...v1.1.5) (2022-01-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to ^0.25.0 ([71f790e](https://github.com/mooyoul/melon-ticket-actions/commit/71f790e8ed33bde762c7dce57e65060b312ff768))
+
 ## [1.1.4](https://github.com/mooyoul/melon-ticket-actions/compare/v1.1.3...v1.1.4) (2021-10-25)
 
 
