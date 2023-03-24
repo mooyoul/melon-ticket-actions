@@ -32,7 +32,7 @@
     "@vingle/tslint-preset": "1.0.1",
     "chai": "4.3.6",
     "husky": "4.3.8",
-    "semantic-release": "17.4.7",
+    "semantic-release": "19.0.0",
     "tslint": "5.20.1",
     "typescript": "3.9.10"
   },
