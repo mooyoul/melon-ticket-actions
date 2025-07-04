@@ -1,22 +1,17 @@
-name: workflow
-on: push
+name: main example
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Every 5 minutes
 jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v1
-      - name: Prepare
-        run: npm ci
-      - name: Lint
-        uses: mooyoul/tslint-actions@master
+      - name: Check Tickets
+        uses: mooyoul/melon-ticket-actions@v1.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: '*.ts'
-      - name: Build
-        run: npm run build
-      - name: Publish
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npx semantic-release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          product-id: 211408
+          schedule-id: 100003
+          seat-id: 678
+          slack-incoming-webhook-url: ${{ secrets.https://hooks.slack.com/services/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 }}
+          message: '<@4x8xvvfbty> 달려달려~'🚨 Melon Ticket cancellation found! [ProdID: 211408] 7월 6일 1층 8구역(678)이 열렸습니다! \\n티켓 바로가기: https://ticket.melon.com/performance/index.htm?prodId=211408&scheduleId=100003"
