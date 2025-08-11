@@ -39,7 +39,7 @@
   "dependencies": {
     "@actions/core": "^1.1.1",
     "@slack/webhook": "^5.0.2",
-    "axios": "^0.27.0"
+    "axios": "^0.30.0"
   },
   "config": {
     "commitizen": {
