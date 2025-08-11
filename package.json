@@ -29,7 +29,7 @@
     "@semantic-release/release-notes-generator": "9.0.3",
     "@types/node": "10.17.60",
     "@vingle/commitlint-preset": "1.0.3",
-    "@vingle/tslint-preset": "1.0.1",
+    "@vingle/tslint-preset": "2.0.0",
     "chai": "4.5.0",
     "husky": "4.3.8",
     "semantic-release": "17.4.7",
