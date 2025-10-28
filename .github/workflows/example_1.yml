@@ -1,6 +1,8 @@
 name: Check Tickets
 on:
-  workflow_dispatch  # 只允許手動執行
+  workflow_dispatch  # 수동 실행 트리거
+  schedule:         # ⬅️ 이 부분을 추가합니다.
+    - cron: '*/5 * * * *' # 5분마다 실행되도록 스케줄 설정
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -10,7 +12,7 @@ jobs:
         uses: mooyoul/melon-ticket-actions@v1
         with:
           product-id: 211782
-          schedule-id: 100001
+          schedule-id: 100002
           seat-id: 10008
-          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }} 
-          message: '자리잡아즉시 구매하세요.' 
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '티켓 풀렸습니다! 즉시 구매하세요.'
