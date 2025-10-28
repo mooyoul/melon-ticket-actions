@@ -1,6 +1,6 @@
 name: Check Tickets
 on:
-  workflow_dispatch  # 수동 실행 트리거
+  workflow_dispatch:  # 수동 실행 트리거
   schedule:         # ⬅️ 이 부분을 추가합니다.
     - cron: '*/5 * * * *' # 5분마다 실행되도록 스케줄 설정
 jobs:
