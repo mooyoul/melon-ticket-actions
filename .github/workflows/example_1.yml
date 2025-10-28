@@ -7,7 +7,16 @@ jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    steps:
+    steps:# --- ⬅️ 이 부분을 추가합니다. ---
+      - name: Test Slack Notification
+        uses: rtCamp/action-slack-notify@v2 # Slack 알림을 위한 다른 Action 사용
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          MSG_MINIMAL: true # 메시지 간소화
+        with:
+          status: success
+          message: '📢 GitHub Actions 알림 기능 테스트 성공!'
+      # -------------------------------
       - name: Check Tickets
         uses: mooyoul/melon-ticket-actions@v1
         with:
