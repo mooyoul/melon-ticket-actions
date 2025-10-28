@@ -25,4 +25,4 @@ jobs:
           schedule-id: 100001
           seat-id: 10008
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '티켓 풀렸습니다! 즉시 구매하세요.'
+          message: '티켓 풀렸습니다! 즉시 구매하세요.!'
