@@ -1,26 +1,18 @@
 name: Check Tickets
 on:
   workflow_dispatch:  # 수동 실행 트리거
-  schedule:         # ⬅️ 이 부분을 추가합니다.
+  schedule:           
     - cron: '*/5 * * * *' # 5분마다 실행되도록 스케줄 설정
 jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    # --- ⬅️ 이 부분을 추가합니다. ---
-      - name: Test Slack Notification
-        uses: act10n/slack@v1 #
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        with:
-          message: '📢 GitHub Actions 알림 기능 테스트 성공!!'
-      # -------------------------------
-      - name: Check Tickets
-        uses: mooyoul/melon-ticket-actions@v1
-        with:
-          product-id: 211782
-          schedule-id: 100001
-          seat-id: 10008
-          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: '티켓 풀렸습니다! 즉시 구매하세요!!'
+    - name: Check Tickets # ⬅️ 이 스텝만 남아야 합니다. (앞에 대시(-)가 있는지 꼭 확인)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100001
+        seat-id: 10008
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: '티켓 풀렸습니다! 즉시 구매하세요!!'
