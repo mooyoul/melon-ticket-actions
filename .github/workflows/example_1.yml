@@ -7,7 +7,8 @@ jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    steps:# --- ⬅️ 이 부분을 추가합니다. ---
+    steps:
+    # --- ⬅️ 이 부분을 추가합니다. ---
       - name: Test Slack Notification
         uses: rtCamp/action-slack-notify@v2 # Slack 알림을 위한 다른 Action 사용
         env:
