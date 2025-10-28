@@ -1,18 +1,79 @@
 name: Check Tickets
 on:
-  workflow_dispatch:  # 수동 실행 트리거
+  workflow_dispatch:  # 수동 실행 트리거 활성화
   schedule:           
-    - cron: '*/5 * * * *' # 5분마다 실행되도록 스케줄 설정
+    - cron: '*/5 * * * *' # 5분마다 자동 실행
+
 jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    - name: Check Tickets # ⬅️ 이 스텝만 남아야 합니다. (앞에 대시(-)가 있는지 꼭 확인)
+    
+    # -------------------------------------------------------------
+    # 1일차 공연 (schedule-id: 100001) 감시 시작
+    # -------------------------------------------------------------
+
+    # 1. 🥇 1일차 VIP 등급 감시
+    - name: Check Tickets - VIP 등급 (1일차)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100001
+        seat-id: 10000
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: 'VIP 좌석 풀렸습니다! (1일차) 즉시 구매하세요!!'
+
+    # 2. 🥈 1일차 R 등급 감시
+    - name: Check Tickets - R 등급 (1일차)
       uses: mooyoul/melon-ticket-actions@v1
       with:
         product-id: 211782
         schedule-id: 100001
         seat-id: 10008
         slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-        message: '티켓 풀렸습니다! 즉시 구매하세요!!'
+        message: '일반석 풀렸습니다! (1일차) 즉시 구매하세요!!'
+
+    # 3. 🥉 1일차 S 등급 감시
+    - name: Check Tickets - S 등급 (1일차)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100001
+        seat-id: 12051
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: '시제석 풀렸습니다! (1일차) 즉시 구매하세요!!'
+
+    # -------------------------------------------------------------
+    # 2일차 공연 (schedule-id: [2일차 ID]) 감시 시작
+    # -------------------------------------------------------------
+
+    # 4. 🥇 2일차 VIP 등급 감시
+    - name: Check Tickets - VIP 등급 (2일차)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100002
+        seat-id: 10000
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: 'VIP 좌석 풀렸습니다! (2일차) 즉시 구매하세요!!'
+
+    # 5. 🥈 2일차 R 등급 감시
+    - name: Check Tickets - R 등급 (2일차)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100002
+        seat-id: 10008
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: '일반석 풀렸습니다! (2일차) 즉시 구매하세요!!'
+
+    # 6. 🥉 2일차 S 등급 감시
+    - name: Check Tickets - S 등급 (2일차)
+      uses: mooyoul/melon-ticket-actions@v1
+      with:
+        product-id: 211782
+        schedule-id: 100002
+        seat-id: 12051
+        slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        message: '시제석 풀렸습니다! (2일차) 즉시 구매하세요!!'
