@@ -9,8 +9,8 @@ jobs:
       - name: Check Tickets
         uses: mooyoul/melon-ticket-actions@v1
         with:
-          product-id: 210868
-          schedule-id: 100002
-          seat-id: 1_0
+          product-id: 211782
+          schedule-id: 100001
+          seat-id: 10008
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }} 
-          message: '@鍾宜庭 票已開放，請立即購買！' 
+          message: '자리잡아즉시 구매하세요.' 
