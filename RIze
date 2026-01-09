@@ -1,0 +1,20 @@
+.github/workflows/melon-check.yml
+yaml
+name: melon-check
+on:
+  schedule:
+    - cron: '*/5 * * * *' # 5분마다 자동으로 실행
+  workflow_dispatch:      # 사용자가 직접 버튼 눌러서 실행 가능하게 함
+
+jobs:
+  check-ticket:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Tickets
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: '212567'       # 예: 멜론티켓 공연번호
+          schedule-id: '100001'      # 예: 회차번호
+          seat-id: '1_0'             # 예: 좌석 등급 ID
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '티켓 떴다! 빨리 확인해!'
