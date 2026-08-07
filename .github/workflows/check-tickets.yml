@@ -1,0 +1,21 @@
+name: Check Melon Tickets
+
+on:
+  workflow_dispatch: {}
+  # schedule:
+  #   - cron: '*/5 * * * *'  # every 5 minutes
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Tickets
+        uses: mooyoul/melon-ticket-actions@v1.1.0
+        with:
+          product-id: '204755'
+          schedule-id: '100001'
+          seat-id: '1_0'
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          message: '<@U12345678> 有票啦~'
