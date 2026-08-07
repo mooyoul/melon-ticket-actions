@@ -19,7 +19,11 @@ GitHub action that checks ticket availability in Melon Ticket (Korean online tic
 
 ## Usage
 
-Please see [example workflow](https://github.com/mooyoul/melon-ticket-actions/blob/1c5a56b9cdd594051d856c16b020f0c5835f6955/.github/workflows/example.yml), or [Workflow Log](https://github.com/mooyoul/melon-ticket-actions/actions?query=workflow%3Aexample) 
+Please see [example workflow](https://github.com/mooyoul/melon-ticket-actions/blob/1c5a56b9cdd594051d856c16b020f0c5835f6955/.github/workflows/example.yml), or [Workflow Log](https://github.com/mooyoul/melon-ticket-actions/actions?query=workflow%3Aexample)
+
+## Secrets
+
+This action sends notifications to Slack. Create a repository secret named `SLACK_WEBHOOK_URL`: Settings → Secrets and variables → Actions → New repository secret. Put your Slack incoming webhook URL there and the workflow will read it as `${{ secrets.SLACK_WEBHOOK_URL }}`.
 
 ## Sample Github Actions Configuration 
 
